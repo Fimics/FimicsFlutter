@@ -4,7 +4,7 @@ import 'package:fimics_flutter/com/mic/flutter/app/util/navigator_util.dart';
 import 'package:fimics_flutter/com/mic/flutter/app/widget/webview.dart';
 import 'package:flutter/material.dart';
 
-///网格卡片
+///首页网格卡片
 class GridNav extends StatelessWidget {
   final GridNavModel gridNavModel;
 
@@ -37,6 +37,7 @@ class GridNav extends StatelessWidget {
     return items;
   }
 
+
   _gridNavItem(BuildContext context, GridNavItem gridNavItem, bool first) {
     List<Widget> items = [];
     items.add(_mainItem(context, gridNavItem.mainItem));
@@ -58,6 +59,7 @@ class GridNav extends StatelessWidget {
     );
   }
 
+  //左边的item
   _mainItem(BuildContext context, CommonModel model) {
     return _wrapGesture(
         context,
@@ -83,6 +85,7 @@ class GridNav extends StatelessWidget {
         model);
   }
 
+  //每行中间的item
   _doubleItem(
       BuildContext context, CommonModel topItem, CommonModel bottomItem) {
     return Column(
